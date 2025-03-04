@@ -23,7 +23,7 @@
             <h1>Olá, eu sou <span>Vitor Menezes</span>.</h1>
             <P>Desenvolvedor criativo focado em construir experiencias digitais excepcionais e interfaces intuitivas.
             </P>
-            <a class="botao">Ver Projetos</a>
+            <a class="botao efeito-cursor">Ver Projetos</a>
         </div>
 
     </section>
@@ -31,7 +31,7 @@
     <section class="secao">
         <h2 class="titulo-secao">Projetos</h2>
         <div class="grade-projeto">
-            <div class="card-projeto">
+            <div class="card-projeto efeito-cursor">
                 <img class="img-projeto" src="./img/projeto1.png" alt="imagem-projeto1">
                 <div class="info-projeto">
                     <h3>Lista de presentes</h3>
@@ -40,7 +40,7 @@
                     <a href="https://vitormzs.github.io/lista-presentes/">Ver Projeto →</a>
                 </div>
             </div>
-            <div class="card-projeto">
+            <div class="card-projeto efeito-cursor">
                 <img class="img-projeto" src="./img/projeto2.png" alt="imagem-projeto2">
                 <div class="info-projeto">
                     <h3>Lista de presentes</h3>
@@ -50,7 +50,7 @@
                     <a href="https://vitormzs.github.io/lista-presentes/">Ver Projeto →</a>
                 </div>
             </div>
-            <div class="card-projeto">
+            <div class="card-projeto efeito-cursor">
                 <img class="img-projeto" src="./img/projeto3.png" alt="imagem-projeto3">
                 <div class="info-projeto">
                     <h3>Lista de presentes</h3>
@@ -62,7 +62,49 @@
             </div>
         </div>
     </section>
+    <section class="secao">
+        <h2 class="titulo-secao">Sobre mim</h2>
+        <div class="sobre">
+            <img class="img-sobre" src="/img/projeto1.png">
+            <div class="conteudo-sobre">
+                <h2>Desenvolvedor com paixão por criar soluções digitais</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quibusdam dignissimos nesciunt minima
+                    hic voluptatibus illum amet explicabo iste ut saepe mollitia dolorum qui laboriosam obcaecati quasi,
+                    recusandae iure tenetur!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque minus ut accusamus, fugiat cum quis
+                    inventore, ducimus ullam mollitia blanditiis sequi delectus laboriosam itaque in praesentium sit
+                    maxime quidem? Non!</p>
+                <div class="habilidades">
+                    <span class="tag-habilidades efeito-cursor">HTML5</span>
+                    <span class="tag-habilidades efeito-cursor">CSS</span>
+                    <span class="tag-habilidades efeito-cursor">JavaScript</span>
+                    <span class="tag-habilidades efeito-cursor">React</span>
+                    <span class="tag-habilidades efeito-cursor">NodeJs</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="secao">
+        <h2 class="titulo-secao">Contatos</h2>
+        <div class="botoes-contato">
+            <a href="" class="botao-contato whatsapp efeito-cursor"><span>WhatsApp</span></a>
+            <a href="" class="botao-contato email efeito-cursor"><span>Email</span></a>
+            <a href="" class="botao-contato linkedin efeito-cursor"><span>LinkdIn</span></a>
+            <a href="" class="botao-contato github efeito-cursor"><span>GitHub</span></a>
+        </div>
+    </section>
+    <footer>
+        <p>Feito com ❤️ por Vitor Menezes</p>
+    </footer>
 
+    <div class="cursor"></div>
 </body>
+    <script>
+        const cursor = document.querySelector('.cursor')
 
+        document.addEventListener('mousemove', function(info) {
+            cursor.style.left = info.clientX + 'px'
+            cursor.style.top = info.clientY + 'px'
+        })
+    </script>
 </html>

@@ -8,6 +8,7 @@
 body {
     background: #0a0a0a;
     color: #fff;
+    cursor: none;
 }
 
 .secao {
@@ -21,6 +22,11 @@ header {
     align-items: center;
     padding: 30px;
     margin-left: 50px;
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
 }
 
 ul {
@@ -61,12 +67,14 @@ ul {
     color: #fff;
     font-weight: bold;
     border-radius: 5px;
+    text-decoration: none;
 }
 
 .titulo-secao {
     font-size: 42px;
     margin-bottom: 60px;
     position: relative;
+    display: inline-block; /* Garante que o sublinhado siga o tamanho do texto */
 }
 
 .titulo-secao::after {
@@ -74,9 +82,14 @@ ul {
     position: absolute;
     left: 0;
     bottom: -15px;
-    width: 100px;
+    width: 100px; /* Tamanho inicial */
     height: 4px;
     background-color: aqua;
+    transition: width 0.3s ease; /* Transição suave na largura */
+}
+
+.titulo-secao:hover::after {
+    width: 100%; /* Expande até a largura total do texto */
 }
 
 .grade-projeto {
@@ -114,6 +127,7 @@ ul {
 .info-projeto a {
     color: aqua;
     font-weight: 500;
+    text-decoration: none;
 }
 
 .sobre {
@@ -206,10 +220,34 @@ footer {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: aqua;
+    background-color: rgba(0, 255, 255, 0.5);
     z-index: 99;
     transform: translate(-50%, -50%);
 }
+
+.top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: rgba(28, 57, 134, 0.5);
+    color: aqua;
+    border: 0.5px solid whitesmoke;
+    border-radius: 40px;
+    padding: 10px 10px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    display: none;
+  }
+  
+  .top-btn:hover {
+    background-color: whitesmoke;
+    color: #161616;
+  }
+
+  .top-btn.show {
+    display: block;
+  }
 
 img {
     max-width: 100%;
